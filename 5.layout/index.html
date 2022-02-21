@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.layout</title>
+    <style>
+        *{padding: 0; margin: 0;}
+        body {background-color: #e3f2fd;}
+        #wrap{width: 1200px; margin: 0 auto;}
+        header{width: 100%; height: 100px; background-color: #b2defe;}
+        .banner{width: 100%; height: 400px; background-color: #7ecbfd;} 
+        #section_1{overflow: hidden;}
+        nav{float: left; width: 33.3333%; height: 500px; background-color: #43b5fc;}
+        .sec1_1{float: left; width: 66.6666%; height: 250px; background-color: #00a5fb;}
+        .sec1_2{float: left; width: 66.6666%; height: 250px; background-color: #0096fa;}
+        #section_2{overflow: hidden;} 
+        .sec2_1{float: left; width: 33.3333%; height: 300px; background-color: #0088ec;}
+        .sec2_2{float: left; width: 33.3333%; height: 300px; background-color: #0076d9;}
+        .sec2_3{float: left; width: 33.3333%; height: 300px; background-color: #0064c6;}
+        #section_3{overflow: hidden; padding: 5%; width: 90%; background-color: #00a6fc;}
+        #section_3>div {float: left; width: 23%; margin: 1%; height: 200px; border-radius: 5px; background-color: #0076d9;}
+        footer {width: 100%; height: 100px; background-color: #43b5fc;}
+
+         /* 화면 너비 0px ~ 1200px */
+         @media (max-width:1220px){
+             #wrap{width: 100%;}
+             .sec2_1{width: 50%;}
+             .sec2_2{width: 50%;}
+             .sec2_3{display: none;}
+             #section_3>div:last-child {display: none;}
+             #section_3>div {width: 31.3333%;}
+        }
+        /* 화면 너비 0px ~ 768px */
+        @media (max-width: 768px){
+            .sec2_1{width: 100%; height: 150px;}
+            .sec2_2{width: 100%; height: 150px;}
+        }
+         /* 화면 너비 0px ~ 480px */
+         @media (max-width: 500px){
+           nav{width: 100%; height: 130px;}
+           .sec1_1{width: 100%;}
+           .sec1_2{width: 100%;}
+           #section_3>div {width: 98%;}
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <section class="banner"></section>
+        
+        <section id="section_1">
+            <nav></nav>
+            <article class="sec1_1"></article>
+            <article class="sec1_2"></article>
+        </section>
+        <!--//section_1-->
+
+        <section id="section_2">
+            <article class="sec2_1"></article>
+            <article class="sec2_2"></article>
+            <article class="sec2_3"></article>
+        </section>
+        <!--//section_2-->
+
+        <section id="section_3">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <!--//section_3-->
+
+        <footer></footer>
+    </div>
+    
+</body>
+</html>
